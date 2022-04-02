@@ -16,7 +16,10 @@
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.3"
   },
+  "homepage": "https://leanhvu21042001.github.io/redux-todo-app/",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "mini-css-extract-plugin": "2.4.5"
   },
   "overrides": {
