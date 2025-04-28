@@ -24,6 +24,7 @@ export const todosRemainingSelector = createSelector(
               .trim()
               .includes(searchText.toLowerCase().trim());
       }
+
       return priorities.length
         ? todo.name
             .toLowerCase()

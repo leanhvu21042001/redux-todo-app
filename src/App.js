@@ -1,8 +1,8 @@
-import { Typography, Divider, Button } from "antd";
+import { Button, Divider, Typography } from "antd";
 import { Trans, useTranslation } from "react-i18next";
 
+import Filters from "./components/Filter";
 import TodoList from "./components/TodoList";
-import Filters from "./components/Filters";
 
 import "./App.css";
 
