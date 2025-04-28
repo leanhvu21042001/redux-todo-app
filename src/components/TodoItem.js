@@ -16,17 +16,18 @@ const priorityColorMapping = {
 
 export default function Todo({ id, name, priority, completed }) {
   const { t } = useTranslation();
-  const [checked, setChecked] = useState(completed);
   const dispatch = useDispatch();
+
+  const [checked, setChecked] = useState(completed);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [todoId, setTodoId] = useState(null);
-  const todoList = useSelector(todosRemainingSelector);
   const [updateTodo, setUpdateTodo] = useState({
     id: null,
     name: null,
     priority: null,
     completed: null,
   });
+  const todoList = useSelector(todosRemainingSelector);
 
   useEffect(() => {
     setUpdateTodo(todoList.find((todo) => todo.id === todoId));
@@ -111,7 +112,7 @@ export default function Todo({ id, name, priority, completed }) {
         </Button>
       </div>
       <Modal
-        title="Basic Modal"
+        title={t("modal.edit_todo.title")}
         open={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}

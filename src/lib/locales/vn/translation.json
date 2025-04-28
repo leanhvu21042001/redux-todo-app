@@ -21,8 +21,13 @@
   },
   "add_todo": {
     "add": "Thêm",
-	"medium": "Vừa",
+    "medium": "Vừa",
     "high": "Cao",
     "low": "Thấp"
+  },
+  "modal": {
+    "edit_todo": {
+      "title": "Chỉnh sửa"
+    }
   }
 }

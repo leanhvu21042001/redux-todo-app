@@ -24,5 +24,10 @@
     "medium": "Medium",
     "high": "High",
     "low": "Low"
+  },
+  "modal": {
+    "edit_todo": {
+      "title": "Edit Todo"
+    }
   }
 }

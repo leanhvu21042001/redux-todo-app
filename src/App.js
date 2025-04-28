@@ -1,10 +1,9 @@
-import { Button, Divider, Typography } from "antd";
+import { Button, Col, Divider, Row, Typography } from "antd";
 import { Trans, useTranslation } from "react-i18next";
 
+import AddTodo from "./components/AddTodo";
 import Filters from "./components/Filter";
 import TodoList from "./components/TodoList";
-
-import "./App.css";
 
 const { Title } = Typography;
 
@@ -14,15 +13,15 @@ function App() {
   return (
     <div
       style={{
-        width: 500,
-        margin: "0 auto",
+        maxWidth: "500px",
+        minWidth: "300px",
         display: "flex",
         flexDirection: "column",
+        margin: "0 auto",
         backgroundColor: "white",
         padding: 20,
         boxShadow: "0 0 10px 4px #bfbfbf",
         borderRadius: 5,
-        height: "90vh",
       }}
     >
       <div>
@@ -56,7 +55,20 @@ function App() {
       </Title>
       <Filters />
       <Divider />
-      <TodoList />
+      <Row style={{ height: "calc(100% - 40px)" }} gutter={[18, 18]}>
+        <Col
+          span={24}
+          style={{
+            maxHeight: "200px",
+            overflowY: "auto",
+          }}
+        >
+          <TodoList />
+        </Col>
+        <Col span={24}>
+          <AddTodo />
+        </Col>
+      </Row>
     </div>
   );
 }
